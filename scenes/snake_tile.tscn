@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://briicfx737wx3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3lwn"]
+bg_color = Color(0, 0.63, 0.0105, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.87, 0.0145, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_661g3"]
+size = Vector2(42, 41)
+
+[node name="SnakeTile" type="Panel"]
+texture_filter = 1
+offset_right = 50.0
+offset_bottom = 50.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p3lwn")
+
+[node name="SnakeTileArea" type="Area2D" parent="."]
+position = Vector2(10, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SnakeTileArea"]
+position = Vector2(15, 15)
+shape = SubResource("RectangleShape2D_661g3")
